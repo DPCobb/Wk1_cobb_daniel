@@ -1,0 +1,164 @@
+/* Basic Styles */
+
+body{
+    max-width:1680px;
+    font: 100% 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    color:#0A121B;
+    background: #ECECEC;
+    margin:0 auto;
+}
+
+/* Header Styles */
+header{
+    width:100%;
+    background:#22313F;
+}
+nav{
+    width:95%;
+    text-align: center;
+    margin:0 auto;
+    padding-bottom: .5%;
+}
+
+nav ul li{
+    display:inline-block;
+    margin-right:2.5%;
+}
+nav ul li:last-child{
+    margin-right:0;
+}
+nav > ul a{
+    text-decoration: none;
+    box-shadow: 0px 4px 0px 0px #019875;
+    color:#ECF0F1;
+    font-weight:bold;
+    font-size:.75em;
+}
+#landing{
+    background:url('../images/hike.jpeg')top center no-repeat;
+    background-size: 100% 100%;
+    position:relative;
+    width:100%;
+    height:550px;
+    padding:0;
+}
+#landing h1{
+    position: absolute;
+    bottom:5%;
+    left: 5%;
+}
+div > h1{
+    color:#F5D76E;
+    font-size:3em;
+}
+/* Content Styles */
+
+.content-wrapper{
+    width:95%;
+    margin: 0 auto;
+}
+.tile{
+    width:28%;
+    height:250px;
+    margin:2%;
+    float:left;
+    box-shadow: 3px 5px 15px 0 #34495E;
+    border-radius:5px;
+    background:#019875;
+    text-align: center;
+}
+
+h2 + .fa{
+    font-size:5em;
+    margin-bottom:3%;
+}
+
+.fa + a{
+    font-size:.5em;
+    color:inherit;
+    display:block;
+}
+
+section > h2{
+    margin:5%;
+}
+article{
+    margin:2% 0;
+    width: 65%;
+    float:left;
+    padding:2%;
+}
+
+
+article section > h3{
+    text-align:left;
+    font-size:2em;
+    font-variant:small-caps;
+}
+
+#hiking div + p::first-letter, #camping div + p::first-letter{
+    margin:0 .25% 0;
+    font-size:2em;
+}
+
+.img-wrap{
+    width:25%;
+    float:left;
+    margin: 2%;
+}
+.img-wrap > img{
+    width:100%;
+}
+
+aside{
+    width:25%;
+    margin:10% 0;
+    float:right;
+}
+
+figure{
+    width:90%;
+    margin:0 auto;
+    float:left;
+}
+
+figure > img{
+    width:100%;
+    border-radius:5px;
+    margin-bottom:5.575%
+}
+
+#hiking, #camping{
+    box-shadow: 3px 5px 15px 0 #34495E;
+    padding:1%;
+    background:#FAF7F7;
+    border-radius:5px;
+    margin:5% auto;
+}
+
+#hike-more, #camp-more{
+    display:none;
+}
+
+input[type="button"]{
+    border:none;
+    width:15%;
+    padding:1%;
+    font-size:1em;
+    margin:0 auto;
+    border-radius:5px;
+    font-weight:bold;
+    font-variant:small-caps;
+    background: #01a57f; /* Old browsers */
+    background: -moz-linear-gradient(top, #01a57f 0%, #00593e 100%); /* FF3.6-15 */
+    background: -webkit-linear-gradient(top, #01a57f 0%,#00593e 100%); /* Chrome10-25,Safari5.1-6 */
+    background: linear-gradient(to bottom, #01a57f 0%,#00593e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01a57f', endColorstr='#00593e',GradientType=0 ); /* IE6-9 */
+    copy
+
+}
+input[type="button"]:focus{
+    outline: none;
+}
+
+/* Footer Styles */
