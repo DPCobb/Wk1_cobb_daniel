@@ -96,7 +96,7 @@ article section > h3{
     font-variant:small-caps;
 }
 
-#hiking div + p::first-letter, #camping div + p::first-letter{
+#hiking div + p::first-letter, #camping div + p::first-letter, #gear div + p::first-letter{
     margin:0 .25% 0;
     font-size:2em;
 }
@@ -128,7 +128,7 @@ figure > img{
     margin-bottom:5.575%
 }
 
-#hiking, #camping{
+#hiking, #camping, #gear{
     box-shadow: 3px 5px 15px 0 #34495E;
     padding:1%;
     background:#FAF7F7;
@@ -136,7 +136,7 @@ figure > img{
     margin:5% auto;
 }
 
-#hike-more, #camp-more{
+#hike-more, #camp-more, #gear-more{
     display:none;
 }
 
@@ -145,7 +145,7 @@ input[type="button"]{
     width:15%;
     padding:1%;
     font-size:1em;
-    margin:0 auto;
+    margin:1% auto;
     border-radius:5px;
     font-weight:bold;
     font-variant:small-caps;
