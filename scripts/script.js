@@ -7,6 +7,10 @@ $(document).ready(function(){
         $("#camp-more").slideToggle();
         checkVal("#camp-toggle");
     });
+    $("#gear-toggle").click(function(){
+        $("#gear-more").slideToggle();
+        checkVal("#gear-toggle");
+    });
     function checkVal(id){
         if($(id).val() == "More"){
             $(id).val("Less");
