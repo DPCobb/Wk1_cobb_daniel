@@ -54,11 +54,12 @@ div > h1{
 /* Content Styles */
 
 .content-wrapper{
-    width:95%;
+    width:80%;
     margin: 0 auto;
+    overflow:auto;
 }
 .tile{
-    width:28%;
+    width:29%;
     height:250px;
     margin:2%;
     float:left;
@@ -79,6 +80,11 @@ h2 + .fa{
     display:block;
 }
 
+section{
+    position:relative;
+    overflow:hidden;
+}
+
 section > h2{
     margin:5%;
 }
@@ -89,11 +95,22 @@ article{
     padding:2%;
 }
 
-
 article section > h3{
     text-align:left;
     font-size:2em;
     font-variant:small-caps;
+}
+
+#hiking, #camping, #gear, #gallery{
+    box-shadow: 3px 5px 15px 0 #34495E;
+    padding:1%;
+    background:#FAF7F7;
+    border-radius:5px;
+    margin:5% auto;
+}
+
+#hike-more, #camp-more, #gear-more{
+    display:none;
 }
 
 #hiking div + p::first-letter, #camping div + p::first-letter, #gear div + p::first-letter{
@@ -112,7 +129,7 @@ article section > h3{
 
 aside{
     width:25%;
-    margin:10% 0;
+    margin:20% 0;
     float:right;
 }
 
@@ -123,21 +140,18 @@ figure{
 }
 
 figure > img{
-    width:100%;
+    width:90%;
     border-radius:5px;
-    margin-bottom:5.575%
+    margin-bottom:5.575%;
+    border:8px solid #D2D7D3;
 }
 
-#hiking, #camping, #gear{
-    box-shadow: 3px 5px 15px 0 #34495E;
-    padding:1%;
-    background:#FAF7F7;
-    border-radius:5px;
-    margin:5% auto;
+aside > figure:nth-child(odd) img{
+    transform:rotate(20deg);
 }
 
-#hike-more, #camp-more, #gear-more{
-    display:none;
+aside > figure:nth-child(even) img{
+    transform:rotate(-20deg);
 }
 
 input[type="button"]{
@@ -149,16 +163,62 @@ input[type="button"]{
     border-radius:5px;
     font-weight:bold;
     font-variant:small-caps;
-    background: #01a57f; /* Old browsers */
-    background: -moz-linear-gradient(top, #01a57f 0%, #00593e 100%); /* FF3.6-15 */
-    background: -webkit-linear-gradient(top, #01a57f 0%,#00593e 100%); /* Chrome10-25,Safari5.1-6 */
-    background: linear-gradient(to bottom, #01a57f 0%,#00593e 100%); /* W3C, IE10+, FF16+, Chrome26+, Opera12+, Safari7+ */
-    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#01a57f', endColorstr='#00593e',GradientType=0 ); /* IE6-9 */
-    copy
+    background: linear-gradient(to bottom, #01a57f 0%,#00593e 100%);
 
 }
-input[type="button"]:focus{
+input[type=button]:focus{
     outline: none;
 }
 
+.tag{
+    width: 200px;
+    position: absolute;
+    top: 25px;
+    right: -50px;
+    left: auto;
+    text-align: center;
+    line-height: 50px;
+    letter-spacing: 1px;
+    font-weight: bold;
+    font-size:1.25em;
+    background: linear-gradient(to bottom, #f5d76e 0%,#b29b50 100%);
+    transform: rotate(45deg);
+    display:none;
+}
+article > section:first-of-type > .tag{
+    display:inline-block;
+}
+
+#gallery{
+    width:95%;
+    margin:0 auto 5% auto;
+    clear:both;
+}
+
+#gallery > div{
+    columns:2;
+    column-gap:20px;
+    -webkit-columns:2;
+    -webkit-column-gap:20px;
+    clear:both;
+    display:none;
+}
+
+#gallery > div > img{
+    width:100%;
+}
+
+#gallery h3{
+    display:inline-block;
+}
+
+#gallery input[type="button"]{
+    float:right;
+}
 /* Footer Styles */
+footer{
+    width:100%;
+    position:relative;
+    text-align: center;
+    font-size:.5em;
+}
