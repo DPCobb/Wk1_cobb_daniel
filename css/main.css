@@ -10,13 +10,12 @@ body{
 
 /* Header Styles */
 header{
-    width:100%;
+    width:100%; /* 1680px */
     background:#22313F;
 }
 nav{
-    width:95%;
+    width:95%; /* 1596px */
     text-align: center;
-    margin:0 auto;
     padding-bottom: .5%;
 }
 
@@ -27,9 +26,9 @@ nav ul li{
 nav ul li:last-child{
     margin-right:0;
 }
-nav > ul a{
+nav ul a{
     text-decoration: none;
-    box-shadow: 0px 4px 0px 0px #019875;
+    box-shadow: 0 4px 0 0 #019875;
     color:#ECF0F1;
     font-weight:bold;
     font-size:.75em;
@@ -38,28 +37,26 @@ nav > ul a{
     background:url('../images/hike.jpeg')top center no-repeat;
     background-size: 100% 100%;
     position:relative;
-    width:100%;
+    width:100%; /* 1680px */
     height:550px;
-    padding:0;
 }
 #landing h1{
     position: absolute;
     bottom:5%;
     left: 5%;
-}
-div > h1{
     color:#F5D76E;
     font-size:3em;
 }
+
 /* Content Styles */
 
 .content-wrapper{
-    width:80%;
+    width:80%; /* 1344px */
     margin: 0 auto;
     overflow:auto;
 }
 .tile{
-    width:29%;
+    width:29.017857142%; /*390px*/
     height:250px;
     margin:2%;
     float:left;
@@ -68,8 +65,8 @@ div > h1{
     background:#019875;
     text-align: center;
 }
-
-h2 + .fa{
+/* .fa is style for Icons used in .tile */
+.fa{
     font-size:5em;
     margin-bottom:3%;
 }
@@ -88,9 +85,12 @@ section{
 section > h2{
     margin:5%;
 }
+
+/*Post Styles*/
+
 article{
     margin:2% 0;
-    width: 65%;
+    width: 65.029761904%; /*874px*/
     float:left;
     padding:2%;
 }
@@ -118,29 +118,33 @@ article section > h3{
     font-size:2em;
 }
 
+/* Images inside Posts */
+
 .img-wrap{
-    width:25%;
+    width:24.942791762%; /*218px*/
     float:left;
     margin: 2%;
 }
 .img-wrap > img{
-    width:100%;
+    width:100%; /*218px*/
 }
 
+/* Sidebar Pictures */
+
 aside{
-    width:25%;
+    width:25%; /*336px*/
     margin:20% 0;
     float:right;
 }
 
 figure{
-    width:90%;
+    width:89.880952381%; /*302px*/
     margin:0 auto;
     float:left;
 }
 
 figure > img{
-    width:90%;
+    width:90.066225165%;
     border-radius:5px;
     margin-bottom:5.575%;
     border:8px solid #D2D7D3;
@@ -153,6 +157,8 @@ aside > figure:nth-child(odd) img{
 aside > figure:nth-child(even) img{
     transform:rotate(-20deg);
 }
+
+/*Button Styles*/
 
 input[type="button"]{
     border:none;
@@ -170,8 +176,10 @@ input[type=button]:focus{
     outline: none;
 }
 
+/*Corner Ribbon*/
+
 .tag{
-    width: 200px;
+    width: 200px; /*Corner "New" Ribbon set width, ribbon breaks with % width*/
     position: absolute;
     top: 25px;
     right: -50px;
@@ -189,18 +197,18 @@ article > section:first-of-type > .tag{
     display:inline-block;
 }
 
+/* Gallery Styles */
+
 #gallery{
-    width:95%;
-    margin:0 auto 5% auto;
+    width:95.014880952%; /*1277px*/
     clear:both;
 }
 
 #gallery > div{
     columns:2;
-    column-gap:20px;
+    column-gap:20px; /* % value returns error*/
     -webkit-columns:2;
-    -webkit-column-gap:20px;
-    clear:both;
+    -webkit-column-gap:20px; /* % value returns error*/
     display:none;
 }
 
@@ -217,8 +225,87 @@ article > section:first-of-type > .tag{
 }
 /* Footer Styles */
 footer{
-    width:100%;
+    width:100%; /*1680px*/
     position:relative;
     text-align: center;
     font-size:.5em;
+}
+
+/* -----------------MEDIA QUERIES----------------- */
+/* Tablet Portrait size to 1080px*/
+@media screen and (max-width:1080px){
+    .fa{
+        font-size:3em;
+        margin-bottom:1%;
+    }
+    .tile{
+        font-size:.75em;
+        height:200px;
+    }
+    article{
+        width:75%;
+    }
+    aside{
+        width:20%;
+    }
+    figure > img{
+        border:2px solid #D2D7D3;
+    }
+}
+
+
+/* Mobile Landscape to Tablet Portrait */
+@media screen and (max-width:767px){
+    #landing{
+        height:300px;
+    }
+    aside{
+        display:none;
+    }
+    .content-wrapper{
+        width:99%;
+    }
+    article{
+        width:95%;
+    }
+    #gallery{
+        width:90%;
+    }
+}
+
+/* Fix for tiles h2 font size */
+@media screen and (max-width:555px){
+    .tile h2{
+        font-size:1.2em;
+    }
+}
+
+/* Mobile Portrait and below */
+@media screen and (max-width:480px){
+    .tile:nth-child(2), .tile:nth-child(3){
+        display:none;
+    }
+    .tile{
+        width:95%;
+        font-size:1.2em;
+    }
+    .img-wrap{
+        width:95%;
+    }
+
+}
+
+/* Small devices */
+@media screen and (max-width:320px){
+    input[type="button"]{
+        width:25%;
+        padding:2.5%;
+    }
+    #gallery > div{
+        columns:1;
+        -webkit-columns:1;
+    }
+    article section{
+        font-size:.85em
+    }
 }

@@ -1,10 +1,9 @@
 <!DOCTYPE html>
-
 <html lang="en">
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>The Road Less Travelled</title>
+    <title>Daniel Cobb: Wk1 Project</title>
     <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.0/jquery.min.js"></script>
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.5.0/css/font-awesome.min.css">
     <link rel="stylesheet" href="css/main.css">
@@ -15,20 +14,23 @@
 <body>
     <header>
         <div id="landing">
-            <!--Background Image-->
+            <!--Background Image used for Landing area-->
             <h1>Take the road less travelled.</h1>
         </div>
+        <!-- Global Nav Items -->
         <nav>
             <ul>
-                <li><a href="index.html">Home</a></li>
-                <li><a href="#hiking">Hiking</a></li>
-                <li><a href="#camping">Camping</a></li>
-                <li><a href="#gear">Gear</a></li>
-                <li><a href="gallery">Gallery</a></li>
+                <li><a href="index.html" title="Home">Home</a></li>
+                <li><a href="#hiking" title="Hiking">Hiking</a></li>
+                <li><a href="#camping" title="Camping">Camping</a></li>
+                <li><a href="#gear" title="Gear">Gear</a></li>
+                <li><a href="#gallery" title="Photo Gallery">Gallery</a></li>
             </ul>
         </nav>
     </header>
+    <!-- Main Body Content: .tile, Article, Aside, Gallery -->
     <div class="content-wrapper">
+        <!-- Fact tiles -->
         <section class="tile">
             <h2>The US has over 30 trails that cover 100+ miles.</h2>
             <i class="fa fa-map-marker"></i>
@@ -44,9 +46,11 @@
             <i class="fa fa-map-signs"></i>
             <a href="http://www.backpacker.com/news-and-events/news/trail-news/10-cool-trail-facts-from-the-american-hiking-society/" title="source">Source</a>
         </section>
+        <!-- Article Holds Posts/Info about hiking, camping, and gear -->
         <article>
             <h2>Recent Articles</h2>
             <hr>
+            <!-- Hiking Info Section -->
             <section id="hiking">
                 <div class="tag"> New </div>
                 <h3>Hiking In the US</h3>
@@ -62,6 +66,7 @@
                 </div>
                 <input type="button" value="More" id="hike-toggle"/>
             </section>
+            <!-- Camping Info Section -->
             <section id="camping">
                 <div class="tag"> New </div>
                 <h3>Camping Around the Globe</h3>
@@ -78,6 +83,7 @@
                 </div>
                 <input type="button" value="More" id="camp-toggle"/>
             </section>
+            <!-- Gear Info Section -->
             <section id="gear">
                 <div class="tag"> New </div>
                 <h3>You and Your Pack</h3>
@@ -98,6 +104,7 @@
                 <input type="button" value="More" id="gear-toggle"/>
             </section>
         </article>
+        <!-- Side bar pictures held in Aside -->
         <aside>
             <figure>
                 <img src="images/hiker.jpg" alt="Image of hiker" title="Image of Hiker"/>
@@ -106,31 +113,33 @@
                 <img src="images/hiker2.jpg" alt="Image of hiker" title="Image of Hiker"/>
             </figure>
             <figure>
-                <img src="images/tent.jpeg" alt="Image of hiker" title="Image of Hiker"/>
+                <img src="images/tent.jpeg" alt="Image of a tent" title="Image of Tent"/>
             </figure>
             <figure>
-                <img src="images/tent2.jpg" alt="Image of hiker" title="Image of Hiker"/>
+                <img src="images/tent2.jpg" alt="Image of a tent" title="Image of Tent"/>
             </figure>
             <figure>
-                <img src="images/tent3.jpg" alt="Image of hiker" title="Image of Hiker"/>
+                <img src="images/tent3.jpg" alt="Image of a tent" title="Image of Tent"/>
             </figure>
             <figure>
                 <img src="images/walking.jpg" alt="Image of hiker" title="Image of Hiker"/>
             </figure>
         </aside>
+        <!-- Expandable Recent Pictures Section -->
         <div id="gallery">
             <h3>Recent Images</h3>
             <input type="button" value="More" id="gal-toggle"/>
             <div id="gal-wrap">
                 <img src="images/hiker.jpg" alt="Image of hiker" title="Image of Hiker"/>
                 <img src="images/hiker2.jpg" alt="Image of hiker" title="Image of Hiker"/>
-                <img src="images/tent.jpeg" alt="Image of hiker" title="Image of Hiker"/>
-                <img src="images/tent2.jpg" alt="Image of hiker" title="Image of Hiker"/>
-                <img src="images/tent3.jpg" alt="Image of hiker" title="Image of Hiker"/>
+                <img src="images/tent.jpeg" alt="Image of a tent" title="Image of Tent"/>
+                <img src="images/tent2.jpg" alt="Image of a tent" title="Image of Tent"/>
+                <img src="images/tent3.jpg" alt="Image of a tent" title="Image of Tent"/>
                 <img src="images/walking.jpg" alt="Image of hiker" title="Image of Hiker"/>
             </div>
         </div>
     </div>
+    <!-- Script for jQuery button events -->
     <script src="scripts/script.js"></script>
     <footer>
         &copy; Daniel Cobb | DWSII Wk1 Project
